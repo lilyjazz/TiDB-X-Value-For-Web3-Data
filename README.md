@@ -42,30 +42,30 @@ Follow these steps to run the project locally.
 ### Installation
 
 1.  **Clone the repository**
-    \`\`\`bash
+    ```bash
     git clone https://github.com/lilyjazz/TiDB-X-Value-For-Web3-Data.git
     cd TiDB-X-Value-For-Web3-Data
-    \`\`\`
+    ```
 
 2.  **Install dependencies**
-    \`\`\`bash
+    ```bash
     npm install
-    \`\`\`
+    ```
 
 3.  **Run the development server**
-    \`\`\`bash
+    ```bash
     npm run dev
-    \`\`\`
+    ```
     Open [http://localhost:3000](http://localhost:3000) (or the port shown in your terminal) to view the app.
 
 4.  **Build for Production**
-    \`\`\`bash
+    ```bash
     npm run build
-    \`\`\`
+    ```
 
 ## 📂 Project Structure
 
-\`\`\`text
+```text
 ├── components/          # UI Components
 │   ├── Hero.tsx         # Main landing area with animations
 │   ├── TerminalDemo.tsx # Interactive SQL editor simulation
@@ -75,7 +75,7 @@ Follow these steps to run the project locally.
 ├── App.tsx              # Main application entry
 ├── index.html           # HTML entry point (contains Tailwind config)
 └── vite.config.ts       # Vite configuration
-\`\`\`
+```
 
 ## 📄 License
 
