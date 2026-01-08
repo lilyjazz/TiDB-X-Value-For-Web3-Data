@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TiDB X | Web3 Data Consolidation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              tidb: {
+                start: '#0F172A', // Slate 900
+                end: '#020617',   // Slate 950
+                accent: '#06b6d4', // Cyan 500
+                glow: '#8b5cf6',   // Violet 500
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'slide-in': 'slideIn 0.5s ease-out forwards',
+              'fade-in': 'fadeIn 0.3s ease-out forwards',
+              'fade-slide-blur': 'fadeSlideBlurIn 1s ease-out both',
+              'drift-right': 'driftRight 12s linear infinite',
+              'drift-left': 'driftLeft 12s linear infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              slideIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeSlideBlurIn: {
+                '0%': { 
+                  opacity: '0', 
+                  transform: 'translateY(40px)', 
+                  filter: 'blur(10px)' 
+                },
+                '100%': { 
+                  opacity: '1', 
+                  transform: 'translateY(0)', 
+                  filter: 'blur(0)' 
+                },
+              },
+              driftRight: {
+                '0%': { transform: 'translateX(-20%) rotate(0deg)', opacity: '0' },
+                '10%': { opacity: '0.08' },
+                '90%': { opacity: '0.08' },
+                '100%': { transform: 'translateX(120vw) rotate(180deg)', opacity: '0' },
+              },
+              driftLeft: {
+                '0%': { transform: 'translateX(120vw) rotate(0deg)', opacity: '0' },
+                '10%': { opacity: '0.08' },
+                '90%': { opacity: '0.08' },
+                '100%': { transform: 'translateX(-20%) rotate(-180deg)', opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #020617;
+        color: white;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .text-gradient {
+        background: linear-gradient(to right, #22d3ee, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .grid-bg {
+        background-size: 50px 50px;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      }
+      /* Custom utility for animation fill mode if needed */
+      .fill-mode-backwards {
+        animation-fill-mode: backwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
